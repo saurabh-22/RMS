@@ -1,0 +1,90 @@
+<div  class="buttons">
+			<div class="dashboard">
+				<a href="#resumes"><button class="dashboard-btn">Dashboard</button></a>
+			</div><!--dashboard-->
+			<div class="resume">
+				<button class="resume-btn">Resume</button>
+			</div><!--resume-->
+		</div><!--buttons-->
+		<div class = "main-container">
+			<div class = "wrapper1">
+				<div class = "MChead">
+				    <div class = "search">
+						<div class="form1">
+							<input type = "submit" value = "" class = "submit"></input>
+		                    <input class = "txt" type="text" placeholder="Search Candidate Name or Email."/>
+		               </div>
+	                </div><!--search-->
+                    <div class = "search1">
+		                <div class = "form2">
+		                	<input type="text"  class="filter-query" placeholder="Apply Filter"/>
+		                	<input type = "submit" class="filter-submit" value = ""/>
+		                </div>
+		                <div class = "dropdown">
+		                	<div class = "para">
+		                		<p>status</p></br>
+		                	</div><!--para-->
+		                	<div class = "list1">
+			                	<input type = "radio" name = "a" value="Offered" />Offered</br>
+			                	<input type = "radio" name= "a" value="Declined"> Declined</br>
+			                	<input type = "radio" name= "a" value="Scheduled For Interview"> Scheduled For Interview</br>
+			                	<input type = "radio" name = "a" value="Rejected"> Rejected</br>
+			                	<input type = "radio" name = "a" value="Joined"> Joined</br>
+			                </div><!--list1-->
+			                <div class = "list2">
+			                	<div class = "form3">
+			                		<span>From</span><input type = "text" id="demo3" class = "frm" name="sdate" value = "" placeholder="YYYY-MM-DD"/>
+			                		<img class = "cal" src = "../images/cal.png" onclick="javascript:NewCssCal('demo3','yyyyMMdd')"/></br>
+			                		<span>To</span> <input type = "text" id= "demo2" class = "to" name="edate" value = "" placeholder="YYYY-MM-DD" style="margin-left:16px;"/>
+			                		<img src = "../images/cal.png" onclick="javascript:NewCssCal('demo2','yyyyMMdd')"/>
+			                	</div>
+			                </div><!--list2-->
+		                </div><!--dropdown-->
+	                </div><!--search1-->
+	                <div class = "down">
+	                	<input type = "button" class="filter" id="statusFilter" value = "Search"/>
+	                </div><!--down-->
+	                <div class = "add">
+	                	<a href = "#resumes/add" target = "_self"> Add New </a>
+		                
+		            </div><!--add-->
+				</div><!--MChead-->
+				<div class="Atable">
+					<table class="Data" cellpadding="0" ,="" cellspacing="0">
+					<thead >
+						<tr>
+	    					<th>Select</th>	
+	    					<th>Phone</th>	
+	    					<th>First Name</th>
+	    					<th>Middle Name</th>
+	    					<th>Last Name</th>
+	    					<th>Age</th>
+	    					<th>Gender</th>
+	    					<th>Email</th>
+	    					<th>Interviewed On</th>
+	    					<th>Status <img src="images/sel.png"></th>
+	    					<th>comment</th>	
+	  					</tr>
+	  				</thead>
+	  				<tbody id="table-data">
+					<tr>
+	  					<td> </td>
+	  				</tr>
+	  				</tbody>
+	  			</table>
+	  				
+				</div><!--Atable-->
+
+				<div  class="buttons1">
+					<div class="delete">
+						<a href="#" class="delete-many"><button>Delete </button></a>
+					 </div>
+		    	</div><!--buttons1
+			</div><!--wrapper1-->
+			<div class="span12">
+		        <div class="alert alert-success" style="display: none">
+		            <b>Success!</b> Candidate Details saved successfully
+		        </div>
+	    	</div>
+			 
+</div><!--main-container-->

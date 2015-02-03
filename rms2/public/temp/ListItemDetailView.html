@@ -1,0 +1,95 @@
+<div class="form-container">
+	<div class = "newcandidate">
+		<h1>Candidate Details</h1>
+	            <hr>
+				<div class = "registration">
+					<div class="id">
+						<label for="id">ID</label>
+						<input type="text" id="cand_id" name="id" value="<%= _id === null ? '' : _id %>" disabled/>
+						<!-- <span class="help-inline"></span> -->
+					</div>
+					<div class="firstName">
+						<label>First Name* </label>
+						<input type = "text" id="firstname" name = "firstname" value="<%= firstname %>"/>
+						<span class="help-inline"></span>
+					</div>
+					<div class = "middleName">
+						<label>Middle Name </label>
+						<input type = "text" id="middlename" name = "middlename" value="<%= middlename %>" />
+						<!-- <span class="help-inline"></span> -->
+					</div>
+					<div class = "lastName">
+						<label>Last Name* </label>
+						<input type = "text" id="lastname" name = "lastname" value="<%= lastname %>" />
+						<span class="help-inline"></span>
+					</div>	
+					<div class = "age">
+						<label>Age </label>
+						<input type = "text" id="age" name = "age" value="<%= age %>" />
+						<!-- <span class="help-inline"></span>	 -->
+					</div>	                		
+					<div class = "gender">
+						<label>Gender </label>
+						<input type = "radio" name = "a" checked>Male</input>
+						<input type = "radio" name = "a">Female</input>
+						<!-- <span class="help-inline"></span> -->
+					</div>
+					<div class = "email">
+						<label>Email* </label>
+						<input type = "text" id="emailaddress" name = "emailaddress" value="<%= emailaddress %>" autofocus/>
+						<span class="help-inline"></span>
+					</div>
+					<div class = "experience">
+						<label>Experience </label>
+						<input type = "text" id="exp" name = "exp" value="<%= exp %>"/><p>In Months</p>
+						<!-- <span class="help-inline"></span> -->
+					</div>
+					<div class = "dob">
+						<label>Date Of Birth </label>
+						<input type = "text" id="dob" name = "dob" value="<%= dob %>"  />
+						<img src = "../javascripts/date/images2/cal.gif" height="20px" width="20px" onclick="javascript:NewCssCal('dob','yyyyMMdd')"/>
+						<!-- <span class="help-inline"></span> -->
+					</div>
+					<div class = "date_of_interview">
+						<label>Interviewd On  </label>
+						<input type = "text" id="Date_of_interview" name= "Date_of_interview" value="<%=Date_of_interview%>" />
+						<img src = "../javascripts/date/images2/cal.gif" height="20px" width="20px" onclick="javascript:NewCssCal('Date_of_interview','yyyyMMdd')"/>
+						<!-- <span class="help-inline"></span> -->
+					</div>
+					<div class = "status">
+						<label>Status </label>
+						<select id="status" name="status" >
+						  <option <%= status == 'none' ? 'selected':''%>>Select</option>
+						  <option <%= status == 'Offered' ? 'selected':''%>>Offered</option>
+						  <option <%= status == 'Declined' ? 'selected':''%>>Declined</option>
+						  <option <%= status == 'Scheduled For Interview' ? 'selected':''%>>Scheduled For Interview</option>
+						  <option <%= status == 'Rejected' ? 'selected':''%>>Rejected</option>
+						  <option <%= status == 'Joined' ? 'selected':''%>>Joined</option>
+						  <!-- <span class="help-inline"></span> -->
+						</select>
+						
+					</div>
+					<div class = "comment">
+						<label>Comment </label>
+						<textarea id="comment" name = "comment" rows = "4", cols = "40" ><%=comment%> </textarea>
+					</div>
+					<div class = "phone">
+						<label>Phone* </label>
+						<input type = "text" id="mobile" name = "mobile" value="<%= mobile %>"/>
+						<span class="help-inline"></span>
+					</div>
+					<div class = "upload">
+						<label>Upload File </label>
+						<input type ="file" id="file" class="input-file" name = "file"/>
+					</div>
+					<a href="#" class="save"><button>Save</button></a> 
+					<a href="#" class="delete"><button>Delete</button></a>           	
+				</div>
+
+			</div><!--newcandidate-->
+			<div class="span12">
+	        <div class="alert alert-success" style="display: none">
+	            <b>Success!</b> Candidate Details saved successfully
+	        </div>
+	    </div>
+</div>

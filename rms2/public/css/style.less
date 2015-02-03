@@ -1,0 +1,361 @@
+@import "variables.less";
+@import "mixins.less";
+body{
+	font-family: lato;
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a{
+	list-style-type: none;
+	text-decoration: none;
+} 
+                        
+.dp{
+    margin-bottom: 20px;
+}
+.one{
+    color:@green;
+}
+.two{
+    color:@red;
+}
+.to{
+    margin-right: 15px;
+}
+.hide{
+    display: none;
+}
+.dropdown{
+    display: none;
+}  
+.header{
+	width:100%;
+	background-color: @hcolor;
+    float: left;
+	.wrapper{
+		width:93%;
+        .left{
+        	float: left;  
+        }       	
+        .para1{
+        	float:left;
+        	width:45%;
+        	text-align: right;
+        	padding:20px;
+            font-size: 22px;
+            font-family: @font;
+            a{
+                color:@color;
+            }
+        }
+        .right{
+        	float: right;
+             position: relative;
+            margin-top: 18px;
+            .hide{
+                position: absolute;
+                display: none;
+                background-color: @logout;
+                top:40px;
+                right:0px;
+                padding:15px 110px 15px 25px;
+            }
+                &:hover{
+                    .hide{
+                        position: absolute;
+                        display: block;
+                        background-color: @logout;
+                        top:40px;
+                        right:0px;
+                        padding:15px 110px 15px 25px;
+                        z-index: 1000px;
+                        .arwup;
+                       p{
+                            color:@color;
+                            font-family: @font;
+                            font-size: 18px;
+                            overflow: hidden;
+                            background-color:@para;
+                        }   
+                    }
+                    .arrow-up {
+                        .arwup;
+                    }
+                }
+        }       	
+        .para2{
+        	float: right;
+            font-size: 16px;
+            color:@color;
+            font-family: @font;
+            margin-top: 25px;
+            span{
+            	margin:0px 50px 0px 10px;
+            }
+        }
+	}
+}
+.container{
+    width:100%;
+    .buttons{
+		border-bottom: 5px solid #ebe9e8;
+		text-align: center;
+	    .dashboard{
+		    display: inline-block;
+		    margin: 15px;
+		    vertical-align: middle;
+		    .dashboard-btn{
+				.btn(@buttoncolor, @bcolor);
+			    &:hover{
+				    .hov;
+			    }
+			}
+		}
+		.resume{
+			display: inline-block;
+			vertical-align: middle;
+			.resume-btn{
+				.btn(@buttoncolor, @bcolor);
+	            &:hover{
+		            .hov;
+		        }
+            }
+        }
+    }
+    .main-container{
+    	width: 100%;
+    	.wrapper1{
+    		width: 75%;
+            margin: 0 auto;
+    		.MChead{
+    			padding: 75px 10px 67px 10px;
+                .search{
+                    float: left;
+                    width: 34%;
+                    .form1{
+                        input[type = "submit"]{
+                            height:40px;
+                            width:50px;
+                            background: url("../images/sea.png") no-repeat scroll center @Color;
+                            float:left;
+                            border-radius: 5px 0px 0px 5px;
+                            border: none;
+                        }
+            			input[type = "text"]{
+            		        height:36px;
+                            border:1px solid @Color;
+                            color: @buttonfont;
+                            font-style: italic;
+                            padding-left: 15px;
+                            font-family: @fontl;
+                            font-size: 17px;
+                            border-radius:0px 5px 5px 0px;
+            			    width:250px;
+                        }
+                    }
+                }
+                .search1{
+                    float: left;
+                    position: relative;
+                    margin-left: 40px;
+                    .form2{
+                        input[type = "text"]{
+                            float: left;
+                            font-family:@fontl;
+                            height:36px;
+                            width:187px;
+                            text-align: center;
+                            border:1px solid @buttonfont;
+                            color: @buttonfont;
+                            padding-left: 15px;
+                            font-size: 17px;
+                            border-radius:5px 0px 0px 5px;
+                        }
+                        input[type = "submit"]{
+                            height:40px;
+                            width:60px;
+                            color:@color;
+                            background: url("../images/filter.png") no-repeat scroll center @tablebody;
+                            font-size: 16px;
+                            border:1px solid @buttonfont;
+                            border-left: none;
+                            font-family: @fontl;
+                            border-radius: 0px 5px 5px 0px;
+                        }
+                    }
+                    &:hover{
+                        .dropdown{
+                            position: absolute;
+                            display:inline-block;
+                            background-color: @color;
+                            width:100%;
+                            border-radius: 10px;
+                            vertical-align: middle;
+                            border:1px solid @bordercolor;
+                            top:42px;
+                            left: 0px;
+                            .para{
+                                p{
+                                    float: left;
+                                    width: 93%;
+                                    color:@color;
+                                    font-family:@fontl;
+                                    padding:5px 0px 5px 20px;
+                                    font-size: 18px;
+                                    border-radius: 10px 10px 0px 0px;
+                                    overflow: hidden;
+                                    background-color:@para;
+                                }
+                            }
+                            .list1{
+                                border-bottom: 2px solid @tablebody;
+                                padding-left: 10px;
+                                font-family:@fontl;
+                                font-size: 17px;
+                                color:@lcolor;
+                                input[type = "checkbox"]{
+                                    margin: 10px 15px;
+                                }
+                            }
+                            .list2{
+                                float: left;
+                                padding-left: 20px;
+                                font-family:@fontl;
+                                .form3{
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    input[type = "text"]{
+                                        height:20px;
+                                        width:50%;
+                                        text-align: center;
+                                        font-family:@font;
+                                        font-size: 17px;
+                                        color:@lcolor;
+                                        padding: 5px 0px;
+                                        margin:10px 15px 10px 10px;
+                                    }
+                                    img{
+                                        float: right;
+                                        height:25px;
+                                        margin: 12px 25px 0px 0px;
+                                    }
+                                    span{
+                                        margin-right: 18px;
+                                        font-family:@font;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .down{
+                    float: left;
+                    input[type = "button"]{
+                                height:40px;
+                                width:60px;
+                                color:@color;
+                                font-size: 16px;
+                                border:1px solid @buttonfont;
+                                font-family: @fontl;
+                                margin-left: 10px;
+                                border-radius: 5px;
+                    }
+                }
+                .add{
+                    a{
+                        margin-left: 60px;
+                        position: relative;
+                        float: left;
+                        padding: 10px 0px;
+                        text-align: center;
+                        font-family:@font;
+                        background-color:@Color; 
+                        color:@color;
+                        border-radius: 5px;
+                        font-size: 17px;
+                        border: none;
+                        width:200px;
+                    }
+                }
+    		}
+            .Atable{
+                float: left;
+                overflow-y:scroll;
+                .Data{
+                    float: left;
+                    margin-left:10px;
+                    overflow-y: scroll;
+                    text-align: center;
+                    color:@lcolor;
+                    background-color: @tabledata;
+                    th{
+                        background-color: @tablebody;
+                        padding: 15px 15px;
+                        font-size: 14px;
+                        border-right:1px solid @color;
+                        font-family: lato;
+                        color:@color;
+                    }
+                    td{
+                        padding:15px 15px;
+                        font-size: 14px;
+                        border-right:1px solid @color;
+                        border-top:1px solid @color;
+                        font-family: @font;
+                    }
+                    img{
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .buttons1{
+                padding-bottom:250px;
+                text-align: center;
+                .delete{
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: @font;
+                    margin-top: 40px;
+                    .delete-btn{
+                        .btn(@Color, @color);
+                    }
+                }
+            }
+    	}
+    }
+}
+.footer{
+    background-color: #cb5253;
+    .wrapper2{
+        width:75%;
+        margin: 0 auto;
+        .footer-nav{
+            padding: 5px 0px 10px 0px;
+            text-align: right;
+            a{
+                color:@color;
+                font-family: @font;
+                padding:5px 35px 10px 35px; 
+                border-right: 1px solid @acolor;
+            }
+        }
+    }
+}
