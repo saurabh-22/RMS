@@ -42,11 +42,7 @@ window.User = Backbone.Model.extend({
         user: '',
         pass:'',
         name: '',
-        email:''
-
-
-
-        
+        email:''      
     }
 
 

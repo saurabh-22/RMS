@@ -23,58 +23,26 @@ router.get('/list', function(req, res) {
 });
 
 // <!--Search By Name API-->
+
 router.get('/search/:term', function(req, res) {
-  var db = req.db;
-  var term = req.params.term;
-  console.log(term);
+	  var db = req.db;
+	  var term = req.params.term;
+	  console.log(term);
 
-  var nameRegEx = /^[a-zA-Z]+$/;
-  var emailRegEx = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-  var numberRegEx = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
-  
-  var type = 'name';
+		db.collection('userslist').find({$or: [{"firstname": new RegExp(term,'i')}, {"emailaddress": new RegExp(term,'i')}, {"mobile": new RegExp(term,'i')}, {"skills": new RegExp(term,'i')},{"lastname": new RegExp(term,'i')}]}).toArray(function(err, resumes) {
+			if(!err){
+			
+				res.json(resumes);
+				
+			}else{
+				res.json(500, 'Error. Please try after some time');
 
-	  if(emailRegEx.exec(term)){
-	  		type = 'email';
-		}
-	  else if(numberRegEx.exec(term)){
-		  	type = 'mobile';
-		}
-		console.log(type);
+			}
 
-	  	if(type == 'email'){
-				db.collection('userslist').find({"emailaddress": new RegExp('^'+term,'i')}).toArray(function(err, resumes) {
-					if(!err){
-					
-						res.json(resumes);
-						
-					}else{
-						res.json(500, 'Error. Please try after some time');
-					}
-				});
-		}else if(type == 'mobile'){
-				db.collection('userslist').find({"mobile": term}).toArray(function(err, resumes) {
-					if(!err){
-					
-						res.json(resumes);
-					
-					}else{
-						res.json(500, 'Error. Please try after some time');
-					}
-				});
-		}else{
-				db.collection('userslist').find({"firstname":new RegExp('^'+term,'i')}).toArray(function(err, resumes) {
-					if(!err){
-					
-						res.json(resumes);
-					
-					}else{
-						res.json(500, 'Error. Please try after some time');
-					}
-				});
-		}
-  
+		});
+		
 });
+
 
 
 // <!--ADD Candidate API-->
@@ -94,7 +62,9 @@ router.post('/add', function(req, res) {
 	form.age = req.body.age,
 	form.gender = req.body.gender,
 	form.emailaddress = req.body.emailaddress,
-	form.exp = req.body.exp,
+	form.exp_month = req.body.exp_month,
+	form.exp_year = req.body.exp_year,
+	form.skills = req.body.skills,
 	form.dob = req.body.dob,
 	form.status = req.body.status,
 	form.comment = req.body.comment,
@@ -131,10 +101,7 @@ router.post('/add', function(req, res) {
 			                	res.send(result[0]);
 
 			                });
-
-			            // });
-			        }
-
+			        	}
 	        		});
         		}
     		}else{
@@ -171,7 +138,9 @@ router.put('/:id', function(req, res) {
 	form.age = req.body.age,
 	form.gender = req.body.gender,
 	form.emailaddress = req.body.emailaddress,
-	form.exp = req.body.exp,
+	form.exp_month = req.body.exp_month,
+	form.exp_year = req.body.exp_year,
+	form.skills = req.body.skills,
 	form.dob = req.body.dob,
 	form.status = req.body.status,
 	form.comment = req.body.comment,
@@ -350,6 +319,9 @@ s3 = function(data, id, ext, res) {
     });
 
 };
+
+
+
 
 
 module.exports = router;

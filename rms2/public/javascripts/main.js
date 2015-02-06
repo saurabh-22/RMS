@@ -3,7 +3,7 @@ var AppRouter = Backbone.Router.extend({
     routes: {
         ""              	               : "login",
         "resumes"                          : "home",
-        "resumes/"                          : "home",
+        "resumes/"                         : "home",
         "resumes/page/:page"               : "list",
         "resumes/add"                      : "addResumes",
         "resumes/:id"                      : "updateResumes",
@@ -38,7 +38,7 @@ var AppRouter = Backbone.Router.extend({
         candidateList.fetch({
             cache: false,
             success: function(data){
-                console.log(candidateList);
+                // console.log(candidateList);
                 $("#content").append(new ListView({model: candidateList, page: p}).el);
             },
             statusCode: {
@@ -86,7 +86,7 @@ var AppRouter = Backbone.Router.extend({
         }
        
         var resume = new Resume();
-        console.log(resume);
+        // console.log(resume);
         $('#content').html(new ListItemDetailView({model: resume}).el);
 
         if (!this.footerView) {
@@ -105,7 +105,7 @@ var AppRouter = Backbone.Router.extend({
         candidateSearch.fetch({
             cache: false,
             success: function(data){
-            console.log(candidateSearch);
+            // console.log(candidateSearch);
             $("#content").append(new ListView({model: candidateSearch,page:p,searchkey:val}).el);
             },
             statusCode: {
@@ -135,7 +135,7 @@ var AppRouter = Backbone.Router.extend({
         filterSearch.fetch({
             cache: false,
             success: function(data){
-              console.log(filterSearch);
+              // console.log(filterSearch);
               $("#content").append(new ListView({model: filterSearch,page:p,searchkey:obj}).el);
             },
             error: function(){
@@ -156,7 +156,7 @@ var AppRouter = Backbone.Router.extend({
 
     signup: function() {
         var user = new User();
-        console.log(user);
+        // console.log(user);
         $('#content').html(new SignupView({model: user}).el);
        
     }

@@ -8,10 +8,8 @@ var session = require('express-session');
 
 router.post('/signup', userExist, function(req,res) {
     var db = req.db;
-    // var userlist = db.collection('authenticationlist');
     var user = req.body.user;
-    var password = req.body.pass;
-    
+    var password = req.body.pass; 
     req.body.pass= saltAndHash(password, function(hash){
             password = hash;
             
@@ -101,14 +99,6 @@ var validatePassword = function(plainPass, hashedPass, callback)
 
 }
 
-function requiredAuthentication(req, res, next) {
-    if (req.session.user) {
-        next();
-    } else {
-        req.session.user = 'Access denied!';
-        res.json('Access denied',401);
-    }
-}
 
 function userExist(req, res, next) {
   var db = req.db;
@@ -118,7 +108,7 @@ function userExist(req, res, next) {
         if (count === 0) {
             next();
         } else {
-            req.session = 'User Exists';
+
             res.json('User Exists',500);
             
         }

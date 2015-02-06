@@ -26,7 +26,7 @@ window.LoginView = Backbone.View.extend({
         // Apply the change to the model
         var target = event.target;
         var change = {};
-        console.log(change);
+        // console.log(change);
         change[target.name] = target.value;
         this.model.set(change);
 

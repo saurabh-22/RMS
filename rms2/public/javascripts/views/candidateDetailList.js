@@ -77,7 +77,7 @@ window.ListItemDetailView = Backbone.View.extend({
             },
             error: function (res) {
                 console.log(res);
-                utils.showAlert('Error', 'An error occurred while trying to add this Candidate', 'alert-error');
+                utils.showAlert('Error', 'An error occurred while trying to add/update this Candidate', 'alert-error');
             }
         });
     },
@@ -101,7 +101,7 @@ window.ListItemDetailView = Backbone.View.extend({
     },
 
     uploadResume:function(event){
-        console.log(event.target.files);        
+        // console.log(event.target.files);        
          var ext = event.target.files[0].name.lastIndexOf('.');
          ext = event.target.files[0].name.substring(ext);
 

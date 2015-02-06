@@ -41,7 +41,7 @@ app.use(function(req,res,next){
 
 app.use(function(req, res, next){
     
-    if(req.path == "/authentication/login"){
+    if(req.path == "/authentication/login" || req.path == "/authentication/signup"){
         next();
     }
 

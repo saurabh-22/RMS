@@ -29,7 +29,7 @@ window.SignupView = Backbone.View.extend({
         // Apply the change to the model
         var target = event.target;
         var change = {};
-        console.log(change);
+        // console.log(change);
         change[target.name] = target.value;
         this.model.set(change);
 
@@ -55,7 +55,6 @@ window.SignupView = Backbone.View.extend({
 
     saveResumes: function () {
         var self = this;
-        // console.log(this.model.urlRoot);
         self.model.urlRoot = "/authentication/signup"
              
         self.model.save(null, {
@@ -63,12 +62,10 @@ window.SignupView = Backbone.View.extend({
                 // self.render();
                 alert('Login Details Saved successfully');
                 app.navigate("", {trigger: true}); 
-                utils.showAlert('Success!', 'Details saved successfully', 'alert-success');
             },
             error: function (res) {
                 alert('User Exists, Please Try some other User Name');
                 console.log(res);
-                utils.showAlert('Error', 'An error occurred while trying to add this Candidate', 'alert-error');
             }
         });
     },

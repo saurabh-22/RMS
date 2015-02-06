@@ -103,6 +103,24 @@ body {
         box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
        
 }
+.registration input[type="date"] {
+        padding: 6px;
+        margin: 10px;
+        width: 47%;
+        position: relative;
+        border:1px solid;
+        border-color: #777;
+        background-color: #fff;
+        color: #777;
+        border-radius: 1px;
+        font-size: 16px;
+        text-align: left;
+        margin-top: 3px;
+        -webkit-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+        -moz-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+        box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+       
+}
 .registration input[type="radio"] {
   font-size: 13px;
   padding: 5px;
@@ -164,8 +182,40 @@ body {
         -moz-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
         box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
 }
-
-.experience p{
-  display: inline-block;
-  font-size: 14px;
+.experience select{
+      margin:10px;
+      position: relative;
+      width:17%;
+      padding: 8px;
+        border:1px solid;
+        border-color: #777;
+        background-color: #fff;
+        color: #777;
+        border-radius: 1px;
+        font-size: 16px;
+        text-align: left;
+        margin-top: 3px;
+        -webkit-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+        -moz-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+        box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+}
+.experience select{
+      margin:10px;
+      position: relative;
+      width:17%;
+      padding: 8px;
+        border:1px solid;
+        border-color: #777;
+        background-color: #fff;
+        color: #777;
+        border-radius: 1px;
+        font-size: 16px;
+        text-align: left;
+        margin-top: 3px;
+        -webkit-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+        -moz-box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+        box-shadow:rgba(255,255,255,0.4) 0 1px 0, inset rgba(0,0,0,0.7) 0 1px 1px;
+}
+.experience span{
+  font-size: 16px;
 }

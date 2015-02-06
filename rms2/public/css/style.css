@@ -340,9 +340,9 @@ a {
   display: inline-block;
   vertical-align: middle;
 }
-.container .main-container .wrapper1 .MChead .search1:hover .dropdown .list2 .form3 input[type="text"] {
+.container .main-container .wrapper1 .MChead .search1:hover .dropdown .list2 .form3 input[type="date"] {
   height: 20px;
-  width: 48%;
+  width: 60%;
   text-align: center;
   font-family: lato;
   font-size: 16px;
@@ -350,6 +350,7 @@ a {
   padding: 5px 0px;
   margin: 10px 8px 8px 0px;
 }
+
 .container .main-container .wrapper1 .MChead .search1:hover .dropdown .list2 .form3 img {
   float: right;
   height: 25px;

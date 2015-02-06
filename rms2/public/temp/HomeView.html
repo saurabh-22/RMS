@@ -12,7 +12,7 @@
 				    <div class = "search">
 						<div class="form1">
 							<input type = "submit" value = "" class = "submit"></input>
-		                    <input class = "txt" type="text" placeholder="Search Candidate Name or Email."/>
+		                    <input class = "txt" type="text" placeholder="Search Candidate Details."/>
 		               </div>
 	                </div><!--search-->
                     <div class = "search1">
@@ -33,10 +33,10 @@
 			                </div><!--list1-->
 			                <div class = "list2">
 			                	<div class = "form3">
-			                		<span>From</span><input type = "text" id="demo3" class = "frm" name="sdate" value = "" placeholder="YYYY-MM-DD"/>
-			                		<img class = "cal" src = "../images/cal.png" onclick="javascript:NewCssCal('demo3','yyyyMMdd')"/></br>
-			                		<span>To</span> <input type = "text" id= "demo2" class = "to" name="edate" value = "" placeholder="YYYY-MM-DD" style="margin-left:16px;"/>
-			                		<img src = "../images/cal.png" onclick="javascript:NewCssCal('demo2','yyyyMMdd')"/>
+			                		<span>From</span><input type = "date" id="demo3" class = "frm" name="sdate" value = "" placeholder="YYYY-MM-DD"/>
+			                		<!-- <img class = "cal" src = "../images/cal.png" onclick="javascript:NewCssCal('demo3','yyyyMMdd')"/> --></br>
+			                		<span>To</span> <input type = "date" id= "demo2" class = "to" name="edate" value = "" placeholder="YYYY-MM-DD" style="margin-left:16px;"/>
+			                		<!-- <img src = "../images/cal.png" onclick="javascript:NewCssCal('demo2','yyyyMMdd')"/> -->
 			                	</div>
 			                </div><!--list2-->
 		                </div><!--dropdown-->
@@ -55,9 +55,7 @@
 						<tr>
 	    					<th>Select</th>	
 	    					<th>Phone</th>	
-	    					<th>First Name</th>
-	    					<th>Middle Name</th>
-	    					<th>Last Name</th>
+	    					<th>Candidate Name</th>
 	    					<th>Age</th>
 	    					<th>Gender</th>
 	    					<th>Email</th>

@@ -23,7 +23,7 @@ window.HomeView = Backbone.View.extend({
         candidateList.fetch({
             cache: false,
             success: function(data){
-                console.log(candidateList);
+                // console.log(candidateList);
                 $("#content").append(new ListView({model: candidateList, page: p}).el);
             },
             statusCode: {
@@ -82,7 +82,6 @@ window.HomeView = Backbone.View.extend({
         var multidel = new ResumesCollection();
         multidel.url = "/resumes/delete/"+JSON.stringify(ids);
           multidel.fetch({
-              silent:true,
               cache:false,
               success: function (model) {
                   $(function(){
@@ -92,7 +91,7 @@ window.HomeView = Backbone.View.extend({
                       $($("input[name='checked-val']:checked")).parents('tr').remove();
 
                    }else{
-
+                      
                    }
                    
                   });
@@ -102,7 +101,7 @@ window.HomeView = Backbone.View.extend({
                 utils.showAlert('Error', 'An error occurred while trying to delete the Selected Candidates', 'alert-error');
               }
           });
-        // return false;
+        return false;
     }
 
     

@@ -41,20 +41,55 @@
 					</div>
 					<div class = "experience">
 						<label>Experience </label>
-						<input type = "text" id="exp" name = "exp" value="<%= exp %>"/><p>In Months</p>
-						<!-- <span class="help-inline"></span> -->
+						<select id="exp_month" name="exp_month" >
+						  <option <%= exp_month == 'none' ? 'selected':''%>>Month</option>
+						  <option <%= exp_month == '0' ? 'selected':''%>>0</option>
+						  <option <%= exp_month == '1' ? 'selected':''%>>1</option>
+						  <option <%= exp_month == '2' ? 'selected':''%>>2</option>
+						  <option <%= exp_month == '3' ? 'selected':''%>>3</option>
+						  <option <%= exp_month == '4' ? 'selected':''%>>4</option>
+						  <option <%= exp_month == '5' ? 'selected':''%>>5</option>
+						  <option <%= exp_month == '6' ? 'selected':''%>>6</option>
+						  <option <%= exp_month == '7' ? 'selected':''%>>7</option>
+						  <option <%= exp_month == '8' ? 'selected':''%>>8</option>
+						  <option <%= exp_month == '9' ? 'selected':''%>>9</option>
+						  <option <%= exp_month == '10' ? 'selected':''%>>10</option>
+						  <option <%= exp_month == '11' ? 'selected':''%>>11</option>
+						  <option <%= exp_month == '12' ? 'selected':''%>>12</option>
+						</select>
+						<span>Months</span>
+						<select id="exp_year" name="exp_year" >
+						  <option <%= exp_year == 'none' ? 'selected':''%>>Year</option>
+						  <option <%= exp_year == '0' ? 'selected':''%>>0</option>
+						  <option <%= exp_year == '1' ? 'selected':''%>>1</option>
+						  <option <%= exp_year == '2' ? 'selected':''%>>2</option>
+						  <option <%= exp_year == '3' ? 'selected':''%>>3</option>
+						  <option <%= exp_year == '4' ? 'selected':''%>>4</option>
+						  <option <%= exp_year == '5' ? 'selected':''%>>5</option>
+						  <option <%= exp_year == '6' ? 'selected':''%>>6</option>
+						  <option <%= exp_year == '7' ? 'selected':''%>>7</option>
+						  <option <%= exp_year == '8' ? 'selected':''%>>8</option>
+						  <option <%= exp_year == '9' ? 'selected':''%>>9</option>
+						  <option <%= exp_year == '10' ? 'selected':''%>>10</option>
+						  <option <%= exp_year == '11' ? 'selected':''%>>11</option>
+						  <option <%= exp_year == '12' ? 'selected':''%>>12</option>
+						  <option <%= exp_year == '13' ? 'selected':''%>>13</option>
+						  <option <%= exp_year == '14' ? 'selected':''%>>14</option>
+						  <option <%= exp_year == '15' ? 'selected':''%>>15</option>
+						</select>
+						<span>Year</span>
+					</div>
+					<div class = "skills">
+						<label>Skills </label>
+						<input type = "text" id="skills" name = "skills" value="<%= skills %>"  />
 					</div>
 					<div class = "dob">
 						<label>Date Of Birth </label>
-						<input type = "text" id="dob" name = "dob" value="<%= dob %>"  />
-						<img src = "../javascripts/date/images2/cal.gif" height="20px" width="20px" onclick="javascript:NewCssCal('dob','yyyyMMdd')"/>
-						<!-- <span class="help-inline"></span> -->
+						<input type = "date" id="dob" name = "dob" value="<%= dob %>"  />
 					</div>
 					<div class = "date_of_interview">
 						<label>Interviewd On  </label>
-						<input type = "text" id="Date_of_interview" name= "Date_of_interview" value="<%=Date_of_interview%>" />
-						<img src = "../javascripts/date/images2/cal.gif" height="20px" width="20px" onclick="javascript:NewCssCal('Date_of_interview','yyyyMMdd')"/>
-						<!-- <span class="help-inline"></span> -->
+						<input type = "date" id="Date_of_interview" name= "Date_of_interview" value="<%=Date_of_interview%>" />
 					</div>
 					<div class = "status">
 						<label>Status </label>
@@ -65,7 +100,6 @@
 						  <option <%= status == 'Scheduled For Interview' ? 'selected':''%>>Scheduled For Interview</option>
 						  <option <%= status == 'Rejected' ? 'selected':''%>>Rejected</option>
 						  <option <%= status == 'Joined' ? 'selected':''%>>Joined</option>
-						  <!-- <span class="help-inline"></span> -->
 						</select>
 						
 					</div>

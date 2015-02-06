@@ -26,10 +26,10 @@ window.HeaderView = Backbone.View.extend({
    logout:function(e){
        
         var model = new User();
-        console.log(model);
+        // console.log(model);
         
         model.urlRoot = "/authentication/logout";
-        console.log(model.urlRoot);
+        // console.log(model.urlRoot);
 
         model.fetch( {
             cache:false,
